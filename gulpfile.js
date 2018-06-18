@@ -20,3 +20,13 @@ gulp.task('css-main', function(){
 	.pipe(gp_concat('style.min.css'))
 	.pipe(gulp.dest('./public/dist/css/'))
 })
+
+gulp.task('copy-fonts', function(){
+	return gulp.src(
+			['./public/fonts/**']
+		)
+		.pipe(gulp.dest('./public/dist/fonts/'))
+
+})
+
+gulp.task('style', ['css-main', 'copy-fonts'], function(){})
