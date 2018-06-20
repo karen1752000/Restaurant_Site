@@ -102,6 +102,7 @@ gulp.task('js-main', function(){
 gulp.task('js', ['js-main', 'js-main'], function(){})
 
 
+gulp.task('prod', ['style', 'js'], function(){})
 gulp.task('default', ['style', 'js'], function(){})
 
 
