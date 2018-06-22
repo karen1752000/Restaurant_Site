@@ -6,6 +6,7 @@ const router = vertex.router()
 router.get('/', (req, res) => {
 
 	const data = {
+		cdn: process.env.TURBO_CDN,
 		greeting: 'Welcome to our Restaurant',
 		description: 'A great place for a business meeting or to bring a date! '
 	}
